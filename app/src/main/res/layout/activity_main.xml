@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.zhangfan.udamallinfo.MainActivity">
+
+
+        <ImageView
+            android:id="@+id/mall_pic"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/mall_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wanda" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/left_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <TextView
+            android:id="@+id/mall_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/head_margin"
+            android:text="@string/mall_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="@dimen/head_font_size"
+            app:layout_constraintLeft_toLeftOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/mall_pic" />
+
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_margin"
+            android:text="地址："
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintLeft_toLeftOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/mall_name" />
+
+        <TextView
+            android:id="@+id/address_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_margin"
+            android:text="上海市杨浦区五角场松沪路2218号"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/address_label"
+            app:layout_constraintLeft_toRightOf="@+id/address_label"
+            app:layout_constraintTop_toTopOf="@+id/address_label" />
+
+        <TextView
+            android:id="@+id/tel_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_margin"
+            android:text="电话号码："
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintLeft_toLeftOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/address_label" />
+
+        <TextView
+            android:id="@+id/tel_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_margin"
+            android:text="021-23239898"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/tel_label"
+            app:layout_constraintLeft_toRightOf="@+id/tel_label"
+            app:layout_constraintTop_toTopOf="@+id/tel_label" />
+
+        <TextView
+            android:id="@+id/desc_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_margin"
+            android:text="描述："
+            app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tel_label" />
+
+        <TextView
+            android:id="@+id/desc_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/desc_value"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/desc_label" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
